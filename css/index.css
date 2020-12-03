@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;700&family=Josefin+Sans:wght@300;400&display=swap');
+
+html {
+  font-size: 16px; /* 16px sono di fatto 1rem. Diventa il nostro gutter */
+}
+
+body {
+
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Domine', serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5;
+
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p, .list--category {
+  color: #4D4D4D;
+}
+
+img {
+  max-width: 100%;
+  height: auto; /* fa mantenere la ratio */
+  vertical-align: middle; /* risolve un bug di visualizzazione quando l'immagine è wrappata da un a*/
+}
+
+.fluid {
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+  margin: 0;
+  line-height: 1;
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+.border-light {
+  border-color: #B5B5B5;
+}
+
+.border-heavy {
+  border-width: 4px;
+}
+
+.max-width-5 {
+  max-width: 96%;
+}
+
+.py5 {
+  padding: 8rem 0;
+}
+
+body.loading {
+  overflow: hidden;
+}
+
+.loader--main {
+  opacity: 0;
+  position: fixed;
+  background: white;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 9999;
+  transition: all 0.9s ease;
+  pointer-events: none;
+}
+
+body.loading .loader--main {
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+
+.container {
+  max-width: 125rem; /* 2000px */
+  width: calc(100% - 8rem);
+  margin: 0 auto;
+  padding: 0 2%;
+}
+
+.container--inner {
+  max-width: 66rem; /*   */
+}
+
+@media (min-width: 48rem) {
+  .container--content {
+    max-width: 80%;
+  }
+
+  .container {
+    padding: 0;
+  }
+}
+
+.section {
+  position: relative;
+}
+
+.text {
+
+}
+
+.text--big {
+  font-size: 1.125rem;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+/* ---------------- */
+
+/* Su basscss abbiamo
+  1 = 0.5rem
+  2 = 1rem
+  3 = 2rem
+  4 = 4rem
+*/
+
+a {
+  color: #222222;
+}
+
+.link {
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+}
+
+.link--button {
+  padding: 0.9rem 1.5rem 0.7rem 1.5rem;
+  border: 1px solid #222222;
+}
+
+.link--cover {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  font-size: 0;
+  text-indent: -1000px;
+  overflow: hidden;
+}
+
+.brand--logo.small {
+  width: 12rem;
+  top: 1rem;
+}
+
+.brand--logo {
+  width: 54%;
+  top: 20vh;
+  position: absolute;
+}
+
+.toggle--menu {
+  width: 2rem;
+}
+
+.toggle--menu .bar {
+  height: 3px;
+  width: 100%;
+  background: #222222;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.toggle--menu:before,
+.toggle--menu:after {
+  content: " ";
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #222222;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.toggle--menu:before {
+  margin-top: 0;
+}
+
+.toggle--menu:after {
+  margin-bottom: 0;
+}
+
+
+.header--main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: rgba(255,255,255,1);
+}
+
+.section--first {
+  margin-top: 28vh;
+}
+
+.section--hero:before {
+  content: " ";
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.1);
+  z-index: 1;
+  position: absolute;
+}
+
+.section--hero .section__header {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  color: #ffffff;
+  min-width: 64%;
+}
+
+.section--hero .section__header p {
+  color: #ffffff;
+}
+
+.section__title {
+  font-size: calc(2rem + 4vw);
+}
+
+.section__title--sans-serif {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.section__title--big {
+  font-size: 3.2rem;
+}
+
+.section__title--small {
+  font-size: 1.25rem;
+}
+
+
+.section .section__header p {
+  font-size: 1.6rem;
+  font-family: serif;
+}
+
+.news > header p{
+  font-size: 0.9rem;
+}
+
+.story .story__title,
+.news .news__title {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.section--poets .news__title,
+.story--big .story__title,
+.news--big .news__title {
+  font-family: 'Domine', serif;
+  font-size: calc(1.5rem + 1.5vw);
+  margin-bottom: 2.30rem;
+}
+
+.section--poets .news__title {
+  font-size: calc(1.2rem + 1.2vw);
+  line-height: 1.25;
+}
+
+.section--poets .link{
+  display: inline-block;
+  color: #999999;
+  text-transform: uppercase;
+  margin-top: 4rem;
+  font-size: 0.8rem;
+}
+
+.section--poets .link:hover:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #000000;
+}
+
+.story--big .story__title {
+  font-size: calc(2rem + 3vw);
+}
+
+.news--big > header p {
+  font-size: 1.125rem;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+.section--popular .news header p,
+.section--poets .news--big > header p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.story--big > p {
+  font-size: 1.125rem;
+  font-style: italic;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+.story__header__??? {
+  position: absolute;
+  top: 0;
+  left: 0;
+  position: sticky;
+}
+
+
+.list--category li {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1.43px;
+}
+
+
+/* section--current-issue */
+
+.section--current-issue .owl-carousel {
+  max-height: 50vh;
+  overflow: hidden;
+}
+
+
+.section--current-issue footer > p {
+  font-size: 1.125rem;
+  padding: 1rem 2rem 4rem 2rem;
+}
+
+.section--parallax {
+  min-height: 70vh;
+}
+
+.footer--main .container {
+  border-top: 5px solid #000;
+  padding-top: 1rem;
+}
+
+
+/* Slick custom css */
+
+.section--current-issue .carousel .slick-list {
+  padding: 0 20%;
+}
+
+@media (max-width: 450px) {
+  .section--current-issue .carousel .slick-list {
+    padding: 0;
+  }
+}
+
+.carousel * {
+  outline: none;
+}
+
+.carousel .slick-prev,
+.carousel .slick-next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  text-indent: -1000px;
+  overflow: hidden;
+  font-size: 0;
+  background: transparent;
+  border: none;
+  width: 50%;
+  cursor: url(../img/chevron-left.svg), w-resize;
+}
+
+.carousel .slick-next {
+  right: 0;
+  cursor: url(../img/chevron-right.svg),e-resize;
+}
+
+@media (max-width: 450px) {
+  .carousel .slick-prev,
+  .carousel .slick-next {
+    display: none;
+  }
+}
+
+
+/* off-canvas */
+
+body.off-canvas-open {
+  overflow: hidden;
+}
+
+body.off-canvas-open .off-canvas {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.off-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.off-canvas .off-canvas--wrapper {
+  background: #ffffff;
+  position: absolute;
+  top: 0;
+  right: -490px;
+  bottom: 0;
+  width: 490px;
+  transition: right 0.3s ease;
+}
+
+@media (max-width: 490px) {
+  .off-canvas .off-canvas--wrapper {
+    width: 100%;
+    right: -100%;
+  }
+}
+
+body.off-canvas-open .off-canvas .off-canvas--wrapper {
+  right: 0;
+}
+
+.off-canvas .toggle--close {
+  background: transparent;
+  border: none;
+  border-radius: none;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  z-index: 99;
+  cursor: pointer;
+}
+.off-canvas .menu a {
+  font-family: 'Domine', serif;
+  font-size: 2.8vh;
+  line-height: 1.4;
+  text-decoration: none;
+}
+.off-canvas .menu--social a {
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+@media (min-aspect-ratio: 16/7) {
+  .off-canvas .menu li.col-12 {
+    width: 50%;
+  }
+  .off-canvas .menu a {
+    font-size: 3.2vh;
+  }
+}
+
+@media (max-width: 490px) {
+  .off-canvas .menu li.col-12 {
+    width: 50%;
+  }
+  .off-canvas .menu a {
+    font-size: 2.2vh;
+  }
+
+  .link--button {
+    padding: 0.9rem 0.5rem 0.7rem 0.5rem;
+  }
+}
