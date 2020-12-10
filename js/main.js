@@ -67,3 +67,6 @@ function checkOffCanvasHeight() {
     $('.off-canvas').removeClass('small')
   }
 }
+
+
+console.log("testing new js..")
