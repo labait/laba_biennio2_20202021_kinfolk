@@ -573,3 +573,14 @@ body.off-canvas-open .off-canvas .off-canvas--wrapper {
     padding: 0.9rem 0.5rem 0.7rem 0.5rem;
   }
 }
+
+.section--latest-stories {
+  display: none;
+}
+@media (min-width: 768px) {
+  .section--latest-stories {
+    display: block;
+  }
+}
+
+
